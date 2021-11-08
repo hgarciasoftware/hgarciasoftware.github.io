@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+    <title>Hector Garcia</title>
+	<link href="../css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="wrapper">
+	    <nav>
+	      <ul>
+	        <li><a href="../index.html">Home</a></li>
+	        <li><a href="./about-me.html">About Me</a></li>
+			<li><a href="./about-you.html">About You</a></li>
+	    </nav>
+	  </div>
+	</header>
+	<section>
+	  <div class="wrapper">
+	    <h2>Hector Garcia</h2>
+	    <h3>Welcome to my GitHub!</h3>
+		<p>I don't usually talk about myself; I don't really like to. The hardest part of this assignment for me is finding a creative use for a <code>&lt;table&gt;</code>. The second hardest part is figuring out what to say.</p>
+        <p>I live in the South Bronx, New York. I've lived in New York for most of my life. I'm <span class="age"></span>* years old.</p>
+		<div style="text-align: center">
+		  <a href="https://flic.kr/p/89Pbqc" target="_blank"><img src="../images/big-pun-rip.jpg" alt="A mural depicting the rapper Big Pun"></a>
+		  <p id="caption">I used to live on Rogers Place, which has a mural dedicated to the rapper Big Pun, like the one above. This is not the same mural but it's the only other image I found besides <a href="https://www.flickr.com/photos/maureen_barlin/23898450060" target="_blank">one from London</a> that was free to use.</p>
+		</div>
+        <p>*That number up there is programmed to change each year on December 3rd.</p>
+		<script>
+          var age = (Date.now() - new Date('1992-12-03')) / 31556952e3;
+          document.querySelector('.age').textContent = Math.floor(age);
+        </script>
+	  </div>
+	</section>
+  </body>
+</html>

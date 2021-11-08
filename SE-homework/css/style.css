@@ -1,0 +1,80 @@
+#caption {
+  color: black;
+  font-weight: bold;
+}
+
+body {
+  background-color: #cbbcb7;
+  color: #6b0000;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a:visited {
+  color: purple;
+}
+
+header {
+  background-color: #cbbcb7;
+  position: sticky;
+  top: 0;
+}
+header nav::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+header nav ul {
+  float: right;
+  list-style: none;
+}
+header nav ul li {
+  float: left;
+}
+header nav ul li a {
+  padding: 8px;
+}
+
+img {
+  max-width: 400px;
+  width: 100%;
+}
+
+form {
+  text-align: center;
+}
+fieldset {
+  border-color: #b6a19a;
+}
+label {
+  display: block;
+}
+input, select, textarea {
+  border: 2px solid #b6a19a;
+  font-family: sans-serif;
+  
+}
+input, select, textarea, button {
+  padding: 8px 12px;
+  width: 90%;
+}
+
+table {
+  border: 2px solid #b6a19a;
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+}
+th, td {
+  border: 2px solid #b6a19a;
+}
+td {
+  word-break: break-word;
+}
+
+.wrapper {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 12px;
+}

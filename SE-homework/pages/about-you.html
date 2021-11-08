@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+    <title>Hector Garcia</title>
+	<link href="../css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="wrapper">
+	    <nav>
+	      <ul>
+	        <li><a href="../index.html">Home</a></li>
+	        <li><a href="./about-me.html">About Me</a></li>
+			<li><a href="./about-you.html">About You</a></li>
+	    </nav>
+	  </div>
+	</header>
+	<section>
+	  <div class="wrapper">
+	    <h2>Hector Garcia</h2>
+	    <h3>Welcome to my GitHub!</h3>
+		<p>Now that you know a little about me, please tell me a little about yourself.</p>
+		<form name="about-you" id="about-you" style="margin-bottom: 24px">
+	      <fieldset>
+		    <label for="name">What is your name?</label>
+			<input id="name" placeholder="Your name" type="text" name="name" required>
+		  </fieldset>
+		  <fieldset>
+		    <label for="state">What state do you live in?</label>
+			<select id="state" name="state" required>
+              <option value="">Your state</option>
+              <option>Alabama</option>
+              <option>Alaska</option>
+              <option>Arizona</option>
+              <option>Arkansas</option>
+              <option>California</option>
+              <option>Colorado</option>
+              <option>Connecticut</option>
+              <option>Delaware</option>
+              <option>District Of Columbia</option>
+              <option>Florida</option>
+              <option>Georgia</option>
+              <option>Hawaii</option>
+              <option>Idaho</option>
+              <option>Illinois</option>
+              <option>Indiana</option>
+              <option>Iowa</option>
+              <option>Kansas</option>
+              <option>Kentucky</option>
+              <option>Louisiana</option>
+              <option>Maine</option>
+              <option>Maryland</option>
+              <option>Massachusetts</option>
+              <option>Michigan</option>
+              <option>Minnesota</option>
+              <option>Mississippi</option>
+              <option>Missouri</option>
+              <option>Montana</option>
+              <option>Nebraska</option>
+              <option>Nevada</option>
+              <option>New Hampshire</option>
+              <option>New Jersey</option>
+              <option>New Mexico</option>
+              <option>New York</option>
+              <option>North Carolina</option>
+              <option>North Dakota</option>
+              <option>Ohio</option>
+              <option>Oklahoma</option>
+              <option>Oregon</option>
+              <option>Pennsylvania</option>
+              <option>Rhode Island</option>
+              <option>South Carolina</option>
+              <option>South Dakota</option>
+              <option>Tennessee</option>
+              <option>Texas</option>
+              <option>Utah</option>
+              <option>Vermont</option>
+              <option>Virginia</option>
+              <option>Washington</option>
+              <option>West Virginia</option>
+              <option>Wisconsin</option>
+              <option>Wyoming</option>
+			</select>
+		  </fieldset>
+		  <fieldset style="margin-bottom: 16px">
+		    <label for="goal">What is one short-term goal you have?</label>
+			<textarea id="goal" placeholder="Your message" name="goal" required style="height: 100px"></textarea>
+		  </fieldset>
+		  <button id="foo" type="submit">Submit</button>
+		</form>
+		<table style="margin-bottom: 24px">
+		  <thead>
+		    <tr>
+			  <th>Name</th>
+			  <th>State</th>
+			  <th>Goal</th>
+			</tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+			  <td id="data-name"></td>
+			  <td id="data-state"></td>
+			  <td id="data-goal"></td>
+			</tr>
+		  </tbody>
+		</table>
+		<div id="thank-you" style="margin-bottom: 16px; padding-bottom: 56.25%; position: relative"></div>
+		<script>
+		  document.querySelector('#about-you').addEventListener('submit', event => {
+	        var aboutYou = document.forms['about-you'];
+		    document.querySelector('#data-name').textContent = aboutYou.name.value;
+		    document.querySelector('#data-state').textContent = aboutYou.state.value;
+		    document.querySelector('#data-goal').textContent = aboutYou.goal.value;
+		    document.querySelector('#thank-you').insertAdjacentHTML('beforeend', '<iframe style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%" src="https://www.youtube-nocookie.com/embed/tG3cJZvl2oE?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+		    event.preventDefault();
+	      }, false);
+		</script>
+	  </div>
+	</section>
+  </body>
+</html>
